@@ -3,6 +3,6 @@
     :maxdepth: 1
     :hidden:
 
-    ReleaseNotes
+    index
     Install guide <InstallGuide/InstallGuide.AnyBody.html#://>
 
