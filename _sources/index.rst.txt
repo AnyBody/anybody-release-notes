@@ -6,13 +6,13 @@ AnyBody Release notes
 AnyBody, v.7.4.0 (28-04-2022)
 *******************************
 
-
 AnyBody, v.7.4.0 provides major updates to the AnyBody Managed Model Repository (AMMR v2.4). 
 The main new model highlights are a number of new examples of exoskeletons and a tool for applying femoral torsion to the TLEM leg model. 
 Most example models now also include a very convenient tool for creating creating high quality videos of the model with a single operation. 
 Besides these additions the new model repository also includes a host of model improvements to all body parts and many bug fixes to problems discovered since the last release. 
 
-Please see the AMMR documentation for a `full changelog <https://anyscript.org/ammr-doc/changelog.html>`__.
+.. seealso:: 
+   The `full AMMR changelog <https://anyscript.org/ammr-doc/changelog.html>`__ in the online documenation. 
 
 The AnyBody Modeling System itself also includes various updates, bugfixes and additions to the AnyScript preparser.
 
