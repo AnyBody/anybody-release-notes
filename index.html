@@ -84,7 +84,26 @@
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form></div>
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="contents.html">
+                    <no title>
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   AnyBody Release notes
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
         <div class="bd-sidebar__bottom">
              <!-- To handle the deprecated key -->
             
@@ -402,10 +421,10 @@ Besides these additions the new model repository also includes a host of model i
 <p><strong>Minor updates:</strong></p>
 <ul class="simple">
 <li><p>The conversion speed from STL to AnySurf files has been greatly improved.</p></li>
-<li><p>Added a <span class="xref std std-ref">AnySurfSTL.NumVertices</span> member variable to get the number of vertices in the surface file.
+<li><p>Added a <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnySurfSTL.html#anysurfstl-numvertices" title="(in AnyScript Reference v7.4)"><span class="xref std std-ref">AnySurfSTL.NumVertices</span></a> member variable to get the number of vertices in the surface file.
 This is for instance convenient to generate a set of vertex indices within a relevant limit.</p></li>
-<li><p>Improved accuracy and robustness of the muscle wrapping algorithm for the classes <a class="reference external" href="AnyScriptReference/reference/classes/AnyKinSPLine.html#anykinspline" title="(in AnyScript Reference v7.3)"><span>AnyKinSPLine</span></a> and
-<a class="reference external" href="AnyScriptReference/reference/classes/AnyMuscleShortestPath.html#anymuscleshortestpath" title="(in AnyScript Reference v7.3)"><span>AnyMuscleShortestPath</span></a>. Note: Minor changes (~10<sup>-5</sup>) to estimated calculated path length,
+<li><p>Improved accuracy and robustness of the muscle wrapping algorithm for the classes <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyKinSPLine.html#anykinspline" title="(in AnyScript Reference v7.4)"><span>AnyKinSPLine</span></a> and
+<a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyMuscleShortestPath.html#anymuscleshortestpath" title="(in AnyScript Reference v7.4)"><span>AnyMuscleShortestPath</span></a>. Note: Minor changes (~10<sup>-5</sup>) to estimated calculated path length,
 velocities, and thereby moment arms can be experienced, which can in turn cause differences in muscle activations.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">ObjSelect()</span></code> and <code class="docutils literal notranslate"><span class="pre">ObjSearch()</span></code> functions can now accept an array of search strings.
 This fixes the need for concatenating multiple multiple calls.</p></li>
@@ -480,17 +499,17 @@ displaying a dialog when refreshing can be re-enabled in Settings: <code class="
 <li><p>Fixed a bug where the same STL file would be converted multiple times to AnySurf format if used more than once in a model.</p></li>
 <li><p>Fixed a bug in Model View image recording, where certain using certain filenames containing underscores would prevent recording of image series.</p></li>
 <li><p>The AnyBody Console application will now also create user AppData folders on first use if they do not already exist.</p></li>
-<li><p><a class="reference external" href="AnyScriptReference/reference/classes/AnyKinMeasureQuadComb.html#anykinmeasurequadcomb" title="(in AnyScript Reference v7.3)"><span>AnyKinMeasureQuadComb</span></a> : Fixed a bug that made the quadratic combination give wrong output for some combinations of input and output dimensionalities.
+<li><p><a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyKinMeasureQuadComb.html#anykinmeasurequadcomb" title="(in AnyScript Reference v7.4)"><span>AnyKinMeasureQuadComb</span></a> : Fixed a bug that made the quadratic combination give wrong output for some combinations of input and output dimensionalities.
 Class Examples were improved and extended with cases that show the problem in older versions.
 Nice, useful examples of making dot and cross products between 3D vector-sized kinematic measures have been added.</p></li>
-<li><p>Fixed a bug which caused <a class="reference external" href="AnyScriptReference/reference/classes/AnyStyleDrawMaterial1.html#anystyledrawmaterial1" title="(in AnyScript Reference v7.3)"><span>AnyStyleDrawMaterial1</span></a> not to work properly when applied to <a class="reference external" href="AnyScriptReference/reference/classes/AnyDrawLine.html#anydrawline" title="(in AnyScript Reference v7.3)"><span>AnyDrawLine</span></a>, <a class="reference external" href="AnyScriptReference/reference/classes/AnyDrawPLine.html#anydrawpline" title="(in AnyScript Reference v7.3)"><span>AnyDrawPLine</span></a> and <a class="reference external" href="AnyScriptReference/reference/classes/AnyDrawVector.html#anydrawvector" title="(in AnyScript Reference v7.3)"><span>AnyDrawVector</span></a>.</p></li>
+<li><p>Fixed a bug which caused <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyStyleDrawMaterial1.html#anystyledrawmaterial1" title="(in AnyScript Reference v7.4)"><span>AnyStyleDrawMaterial1</span></a> not to work properly when applied to <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyDrawLine.html#anydrawline" title="(in AnyScript Reference v7.4)"><span>AnyDrawLine</span></a>, <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyDrawPLine.html#anydrawpline" title="(in AnyScript Reference v7.4)"><span>AnyDrawPLine</span></a> and <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyDrawVector.html#anydrawvector" title="(in AnyScript Reference v7.4)"><span>AnyDrawVector</span></a>.</p></li>
 <li><p>Fixed a bug in the Model View, where showing forces through a Model View interaction would cause extra erroneous force arrows to be shown.</p></li>
 <li><p>Fixed a problem where the <code class="docutils literal notranslate"><span class="pre">#default</span></code> identifier could not be used in out-defined code blocks.</p></li>
 <li><p>Fixed a problem opening files when a new unsaved file tab is present in the Script Editor.</p></li>
-<li><p>Fixed the bug that calibration of <a class="reference external" href="AnyScriptReference/reference/classes/AnyLigament.html#anyligament" title="(in AnyScript Reference v7.3)"><span>AnyLigament</span></a> with <a class="reference external" href="AnyScriptReference/reference/classes/AnyBodyCalibrationStudy.html#anybodycalibrationstudy" title="(in AnyScript Reference v7.3)"><span>AnyBodyCalibrationStudy</span></a>’s ligament adjustment operation
+<li><p>Fixed the bug that calibration of <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyLigament.html#anyligament" title="(in AnyScript Reference v7.4)"><span>AnyLigament</span></a> with <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyBodyCalibrationStudy.html#anybodycalibrationstudy" title="(in AnyScript Reference v7.4)"><span>AnyBodyCalibrationStudy</span></a>’s ligament adjustment operation
 did not properly override symbolic expressions of the ligament slack-length. This could imply that calibrated ligament values were reset
 to original values after calibration.
-Class Example for <a class="reference external" href="AnyScriptReference/reference/classes/AnyLigament.html#anyligament" title="(in AnyScript Reference v7.3)"><span>AnyLigament</span></a> was added to demonstrate the correct functionality.</p></li>
+Class Example for <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyLigament.html#anyligament" title="(in AnyScript Reference v7.4)"><span>AnyLigament</span></a> was added to demonstrate the correct functionality.</p></li>
 </ul>
 </div>
 <div class="section" id="anybody-v-7-3-4-06-07-2021">
@@ -510,7 +529,7 @@ The included AMMR (v.2.3.4) contains mostly bug fixes.</p>
 <p><strong>Minor updates:</strong></p>
 <blockquote>
 <div><ul class="simple">
-<li><p>Added an option to specify the start time in an <a class="reference external" href="AnyScriptReference/reference/classes/AnyInputBVH.html#anyinputbvh" title="(in AnyScript Reference v7.3)"><span>AnyInputBVH</span></a> class which corresponds with the first frame in the data.
+<li><p>Added an option to specify the start time in an <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyInputBVH.html#anyinputbvh" title="(in AnyScript Reference v7.4)"><span>AnyInputBVH</span></a> class which corresponds with the first frame in the data.
 This is useful for synchronizing inertial Mocap data with other recordings. Previously the first frame in a BVH file always corresponded to the time (0 seconds).</p></li>
 </ul>
 </div></blockquote>
@@ -566,24 +585,24 @@ The included AMMR (v.2.3.2) contains mostly bug fixes as well as a few improveme
 <ul class="simple">
 <li><p><strong>Model View:</strong></p>
 <ul>
-<li><p>It is now possible to specify if an <a class="reference external" href="AnyScriptReference/reference/classes/AnyCamera.html#anycamera" title="(in AnyScript Reference v7.3)"><span>AnyCamera</span></a>: should render as the current Model View state, the Model state or according to ModelViewDefinitions specified for the camera.</p></li>
-<li><p><a class="reference external" href="AnyScriptReference/reference/classes/AnyStyleFont3DView.html#anystylefont3dview" title="(in AnyScript Reference v7.3)"><span class="xref std std-ref">AnyStyleFont3DView</span></a> has a new member <span class="xref std std-ref">anystylefont3dview.overlay</span> for specifying that the text is to be rendered visually in front of other objects.</p></li>
+<li><p>It is now possible to specify if an <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyCamera.html#anycamera" title="(in AnyScript Reference v7.4)"><span>AnyCamera</span></a>: should render as the current Model View state, the Model state or according to ModelViewDefinitions specified for the camera.</p></li>
+<li><p><a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyStyleFont3DView.html#anystylefont3dview" title="(in AnyScript Reference v7.4)"><span class="xref std std-ref">AnyStyleFont3DView</span></a> has a new member <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyStyleFont3DView.html#anystylefont3dview-overlay" title="(in AnyScript Reference v7.4)"><span>Overlay</span></a> for specifying that the text is to be rendered visually in front of other objects.</p></li>
 </ul>
 </li>
 </ul>
 <p><strong>Minor updates:</strong></p>
 <ul class="simple">
-<li><p>Updated <a class="reference external" href="AnyScriptReference/reference/classes/AnyForceMomentMeasure2.html#anyforcemomentmeasure2" title="(in AnyScript Reference v7.3)"><span>AnyForceMomentMeasure2</span></a> with an option to calculate cross-sectional forces in user-defined cross sections.
+<li><p>Updated <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyForceMomentMeasure2.html#anyforcemomentmeasure2" title="(in AnyScript Reference v7.4)"><span>AnyForceMomentMeasure2</span></a> with an option to calculate cross-sectional forces in user-defined cross sections.
 ‘CutSystem’ switch enables cutting the system by a plane through the point-of-interest.</p></li>
 <li><p>The muscle wrapping algorithm has been updated to make it more robust on all surface.</p></li>
 </ul>
 <p><strong>Bugfixes:</strong></p>
 <ul class="simple">
-<li><p>Fixed a bug in <a class="reference external" href="AnyScriptReference/reference/classes/AnyOutputBVH.html#anyoutputbvh" title="(in AnyScript Reference v7.3)"><span>AnyOutputBVH</span></a>: Translational and rotational degrees of freedom were saved without scaling,
+<li><p>Fixed a bug in <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyOutputBVH.html#anyoutputbvh" title="(in AnyScript Reference v7.4)"><span>AnyOutputBVH</span></a>: Translational and rotational degrees of freedom were saved without scaling,
 which could produce a mismatch of units in the header and motion data sections, respectively.
-Now the inverse scalings from the associated <a class="reference external" href="AnyScriptReference/reference/classes/AnyInputBVH.html#anyinputbvh" title="(in AnyScript Reference v7.3)"><span>AnyInputBVH</span></a> are applied.
-Thereby, <a class="reference external" href="AnyScriptReference/reference/classes/AnyOutputBVH.html#anyoutputbvh" title="(in AnyScript Reference v7.3)"><span>AnyOutputBVH</span></a> saves motion data in the same units as the associated input BVH file and the header section.</p></li>
-<li><p>Fixed a bug where <a class="reference external" href="AnyScriptReference/reference/classes/AnyMechOutputFileForceExport.html#anymechoutputfileforceexport" title="(in AnyScript Reference v7.3)"><span>AnyMechOutputFileForceExport</span></a> produced empty files.</p></li>
+Now the inverse scalings from the associated <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyInputBVH.html#anyinputbvh" title="(in AnyScript Reference v7.4)"><span>AnyInputBVH</span></a> are applied.
+Thereby, <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyOutputBVH.html#anyoutputbvh" title="(in AnyScript Reference v7.4)"><span>AnyOutputBVH</span></a> saves motion data in the same units as the associated input BVH file and the header section.</p></li>
+<li><p>Fixed a bug where <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyMechOutputFileForceExport.html#anymechoutputfileforceexport" title="(in AnyScript Reference v7.4)"><span>AnyMechOutputFileForceExport</span></a> produced empty files.</p></li>
 <li><p>Fixed a bug where the Class Name and Object Name columns in Data View and Property View windows were missing.</p></li>
 <li><p>Fixed a bug where copying an object name from the Model Tree would give not only the name but also descriptive text not convenient during model programming.</p></li>
 </ul>
@@ -612,18 +631,18 @@ which was added in AMMR 2.3. Please refer to the dedicated release notes in the 
 </ul>
 <p><strong>Bugfixes:</strong></p>
 <ul class="simple">
-<li><p>Fixed a bug introduced with AnyBody 7.3.0 where values and ranges of design variables (<a class="reference external" href="AnyScriptReference/reference/classes/AnyDesVar.html#anydesvar" title="(in AnyScript Reference v7.3)"><span>AnyDesVar</span></a>) were swapped when running parameter studies (<a class="reference external" href="AnyScriptReference/reference/classes/AnyParamStudy.html#anyparamstudy" title="(in AnyScript Reference v7.3)"><span>AnyParamStudy</span></a>).</p></li>
+<li><p>Fixed a bug introduced with AnyBody 7.3.0 where values and ranges of design variables (<a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyDesVar.html#anydesvar" title="(in AnyScript Reference v7.4)"><span>AnyDesVar</span></a>) were swapped when running parameter studies (<a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyParamStudy.html#anyparamstudy" title="(in AnyScript Reference v7.4)"><span>AnyParamStudy</span></a>).</p></li>
 <li><p>Fixed a bug where deleting a model containing an AnyChart would cause a crash.</p></li>
 <li><p>Fixed a bug where AnyDrawWidgets would not be rendered correctly in the Model View after a reload.</p></li>
-<li><p>Fixed a bug where <a class="reference external" href="AnyScriptReference/reference/classes/AnyDrawWidgetRot.html#anydrawwidgetrot" title="(in AnyScript Reference v7.3)"><span>AnyDrawWidgetRot</span></a> would not be updated correctly during dragging of a handle.</p></li>
-<li><p>Updated <a class="reference external" href="AnyScriptReference/reference/classes/AnyDrawWidgetLin.html#anydrawwidgetlin" title="(in AnyScript Reference v7.3)"><span>AnyDrawWidgetLin</span></a> to only have the center drag handle enabled when both x, y and z axis are enabled.</p></li>
-<li><p>Fixed a bug where AnyDrawObjects containing 3D lines would sometimes not respect color settings applied through <a class="reference external" href="AnyScriptReference/reference/classes/AnyStyleDrawMaterial1.html#anystyledrawmaterial1" title="(in AnyScript Reference v7.3)"><span>AnyStyleDrawMaterial1</span></a>.</p></li>
+<li><p>Fixed a bug where <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyDrawWidgetRot.html#anydrawwidgetrot" title="(in AnyScript Reference v7.4)"><span>AnyDrawWidgetRot</span></a> would not be updated correctly during dragging of a handle.</p></li>
+<li><p>Updated <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyDrawWidgetLin.html#anydrawwidgetlin" title="(in AnyScript Reference v7.4)"><span>AnyDrawWidgetLin</span></a> to only have the center drag handle enabled when both x, y and z axis are enabled.</p></li>
+<li><p>Fixed a bug where AnyDrawObjects containing 3D lines would sometimes not respect color settings applied through <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyStyleDrawMaterial1.html#anystyledrawmaterial1" title="(in AnyScript Reference v7.4)"><span>AnyStyleDrawMaterial1</span></a>.</p></li>
 <li><p>Fixed a bug where a long delay might occur in Model View updates when a model was loaded without a Model View active.</p></li>
 <li><p>Improved the Model View redraw strategy when interacting with it through the Model Tree and Component Tree to remove unneeded redraws.</p></li>
 <li><p>Fixed a bug where doing Model View interaction using a multi-selection in the Model Tree would create multiple undo points for the Model View.</p></li>
-<li><p>Fixed a minor bug in the internal muscle model equilibrium handling in class <a class="reference external" href="AnyScriptReference/reference/classes/AnyMuscleModel3E.html#anymusclemodel3e" title="(in AnyScript Reference v7.3)"><span>AnyMuscleModel3E</span></a>.
+<li><p>Fixed a minor bug in the internal muscle model equilibrium handling in class <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyMuscleModel3E.html#anymusclemodel3e" title="(in AnyScript Reference v7.4)"><span>AnyMuscleModel3E</span></a>.
 This bug could produce small mismatch between passive and contractile element forces and lead to excess of related, unneccessary equilibrium warnings.</p></li>
-<li><p>Fixed a bug where <a class="reference external" href="AnyScriptReference/reference/classes/AnyDrawParamSurf.html#anydrawparamsurf" title="(in AnyScript Reference v7.3)"><span>AnyDrawParamSurf</span></a> would not always be correctly updated during param studies.</p></li>
+<li><p>Fixed a bug where <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyDrawParamSurf.html#anydrawparamsurf" title="(in AnyScript Reference v7.4)"><span>AnyDrawParamSurf</span></a> would not always be correctly updated during param studies.</p></li>
 <li><p>Fixed a bug where the Model View restore/undo/redo would not reliable function for certain draw object.</p></li>
 <li><p>Fixed a bug where right-clicking on an object name in the Script Editor during model loading might cause a crash.</p></li>
 </ul>
@@ -642,13 +661,13 @@ Please see the AMMR documentation for a full changelog (<a class="reference exte
 <ul class="simple">
 <li><p><strong>AnyScript Modeling Language:</strong></p>
 <ul>
-<li><p><a class="reference external" href="AnyScriptReference/reference/classes/AnyKinMeasureQuadComb.html#anykinmeasurequadcomb" title="(in AnyScript Reference v7.3)"><span>AnyKinMeasureQuadComb</span></a> is a new so-called kinematic combination measure.
-It derives from <a class="reference external" href="AnyScriptReference/reference/classes/AnyKinMeasureLinComb.html#anykinmeasurelincomb" title="(in AnyScript Reference v7.3)"><span>AnyKinMeasureLinComb</span></a> that provides a linear combination of other kinematic measures.
-<a class="reference external" href="AnyScriptReference/reference/classes/AnyKinMeasureQuadComb.html#anykinmeasurequadcomb" title="(in AnyScript Reference v7.3)"><span>AnyKinMeasureQuadComb</span></a> extends this with quadratic terms, i.e. the ability to make products of other measures.</p></li>
-<li><p><a class="reference external" href="AnyScriptReference/reference/classes/AnyOutputBVH.html#anyoutputbvh" title="(in AnyScript Reference v7.3)"><span>AnyOutputBVH</span></a>: New output-file class that can save new kinematic data for a BVH model (<a class="reference external" href="AnyScriptReference/reference/classes/AnyInputBVH.html#anyinputbvh" title="(in AnyScript Reference v7.3)"><span>AnyInputBVH</span></a>).
+<li><p><a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyKinMeasureQuadComb.html#anykinmeasurequadcomb" title="(in AnyScript Reference v7.4)"><span>AnyKinMeasureQuadComb</span></a> is a new so-called kinematic combination measure.
+It derives from <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyKinMeasureLinComb.html#anykinmeasurelincomb" title="(in AnyScript Reference v7.4)"><span>AnyKinMeasureLinComb</span></a> that provides a linear combination of other kinematic measures.
+<a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyKinMeasureQuadComb.html#anykinmeasurequadcomb" title="(in AnyScript Reference v7.4)"><span>AnyKinMeasureQuadComb</span></a> extends this with quadratic terms, i.e. the ability to make products of other measures.</p></li>
+<li><p><a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyOutputBVH.html#anyoutputbvh" title="(in AnyScript Reference v7.4)"><span>AnyOutputBVH</span></a>: New output-file class that can save new kinematic data for a BVH model (<a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyInputBVH.html#anyinputbvh" title="(in AnyScript Reference v7.4)"><span>AnyInputBVH</span></a>).
 This is useful if motion is predicted or otherwise modified with AnyBody and needs to be exported for use in another software, e.g. from where the BVH data orginated.</p></li>
-<li><p><a class="reference external" href="AnyScriptReference/reference/classes/AnyInputBVH.html#anyinputbvh" title="(in AnyScript Reference v7.3)"><span>AnyInputBVH</span></a>: The new mode, introduced in v.7.2.3, for better handling of discontinuous (jumping) angular data
-and direct generation of virtual marker data is now default, enabling a direct interface to a human model similar to <a class="reference external" href="AnyScriptReference/reference/classes/AnyInputC3D.html#anyinputc3d" title="(in AnyScript Reference v7.3)"><span>AnyInputC3D</span></a>.
+<li><p><a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyInputBVH.html#anyinputbvh" title="(in AnyScript Reference v7.4)"><span>AnyInputBVH</span></a>: The new mode, introduced in v.7.2.3, for better handling of discontinuous (jumping) angular data
+and direct generation of virtual marker data is now default, enabling a direct interface to a human model similar to <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyInputC3D.html#anyinputc3d" title="(in AnyScript Reference v7.4)"><span>AnyInputC3D</span></a>.
 Since v.7.2.3, the data organization has been improved slightly. The BVH model example in the AMMR has been updated accordingly.</p></li>
 </ul>
 </li>
@@ -656,12 +675,12 @@ Since v.7.2.3, the data organization has been improved slightly. The BVH model e
 <ul>
 <li><p>The closest point calculation speed for ellipsoids has been improved. This is particular important for string-wrapping in AnyKinSPLine,
 and thereby in muscle wrapping, but it affects any kinematic measure that uses the ellipsoid surface.</p></li>
-<li><p>More robust prediction for the next step for string-wrapping, i.e. for class <a class="reference external" href="AnyScriptReference/reference/classes/AnyKinSPLine.html#anykinspline" title="(in AnyScript Reference v7.3)"><span>AnyKinSPLine</span></a>. Important for <a class="reference external" href="AnyScriptReference/reference/classes/AnyMuscleShortestPath.html#anymuscleshortestpath" title="(in AnyScript Reference v7.3)"><span>AnyMuscleShortestPath</span></a>.</p></li>
-<li><p>It is possible to enable a new and faster wrapping method compared to the standard one for class <a class="reference external" href="AnyScriptReference/reference/classes/AnyKinSPLine.html#anykinspline" title="(in AnyScript Reference v7.3)"><span>AnyKinSPLine</span></a>.
+<li><p>More robust prediction for the next step for string-wrapping, i.e. for class <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyKinSPLine.html#anykinspline" title="(in AnyScript Reference v7.4)"><span>AnyKinSPLine</span></a>. Important for <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyMuscleShortestPath.html#anymuscleshortestpath" title="(in AnyScript Reference v7.4)"><span>AnyMuscleShortestPath</span></a>.</p></li>
+<li><p>It is possible to enable a new and faster wrapping method compared to the standard one for class <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyKinSPLine.html#anykinspline" title="(in AnyScript Reference v7.4)"><span>AnyKinSPLine</span></a>.
 The new algorithm is still experimental.
-To activate it for all shortest-path kinematic measures (<a class="reference external" href="AnyScriptReference/reference/classes/AnyKinSPLine.html#anykinspline" title="(in AnyScript Reference v7.3)"><span>AnyKinSPLine</span></a>) and wrapping muscles (<a class="reference external" href="AnyScriptReference/reference/classes/AnyMuscleShortestPath.html#anymuscleshortestpath" title="(in AnyScript Reference v7.3)"><span>AnyMuscleShortestPath</span></a>),
+To activate it for all shortest-path kinematic measures (<a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyKinSPLine.html#anykinspline" title="(in AnyScript Reference v7.4)"><span>AnyKinSPLine</span></a>) and wrapping muscles (<a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyMuscleShortestPath.html#anymuscleshortestpath" title="(in AnyScript Reference v7.4)"><span>AnyMuscleShortestPath</span></a>),
 set this global handle “System.Compatibility.AnyBody73_ExperimentalShortestPathSolver = On;” in the AnyScript main folder.
-The new method can also be activated for selected measures or muscles in the <a class="reference external" href="AnyScriptReference/reference/classes/AnyKinSPLine.html#anykinspline" title="(in AnyScript Reference v7.3)"><span>AnyKinSPLine</span></a> object.
+The new method can also be activated for selected measures or muscles in the <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyKinSPLine.html#anykinspline" title="(in AnyScript Reference v7.4)"><span>AnyKinSPLine</span></a> object.
 The new algorithm is inspired by, but not a one to one implementation of the article “FAST AND ROBUST MUSCLE PATH WRAPPING FOR ARBITRARY SURFACES”
 (<a class="reference external" href="https://isbweb.org/~tgcs/iscsb-2019/abstracts/40_P6-3.pdf">https://isbweb.org/~tgcs/iscsb-2019/abstracts/40_P6-3.pdf</a>), written by John E. Lloyd, Ian Stavness and Sidney Fels.</p></li>
 </ul>
@@ -679,19 +698,19 @@ The new algorithm is inspired by, but not a one to one implementation of the art
 this is now reported, and rendering is not attempted.
 For instance, this typically occur when running AnyBody on a remote desktop.
 The error message provides information on how to work around the problem.</p></li>
-<li><p>The concept for auto-generated AnyDrawObjects (<a class="reference external" href="AnyScriptReference/reference/classes/AnyDrawObject.html#anydrawobject" title="(in AnyScript Reference v7.3)"><span>AnyDrawObject</span></a>) has been significantly expanded in this version.
+<li><p>The concept for auto-generated AnyDrawObjects (<a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyDrawObject.html#anydrawobject" title="(in AnyScript Reference v7.4)"><span>AnyDrawObject</span></a>) has been significantly expanded in this version.
 This concept aims to enable the user to see most key mechanical features of the model without scripting specific drawing statement (i.e. entering drawing objects manually).
 This new concept is key to browsing, understanding, and debugging your model.</p>
 <ul>
 <li><p>Specifically, the following AnyScript classes now always contain drawing objects (typically named the prefix “view”:
-<a class="reference external" href="AnyScriptReference/reference/classes/AnyRefFrame.html#anyrefframe" title="(in AnyScript Reference v7.3)"><span>AnyRefFrame</span></a>,
-<a class="reference external" href="AnyScriptReference/reference/classes/AnySeg.html#anyseg" title="(in AnyScript Reference v7.3)"><span>AnySeg</span></a>,
-<a class="reference external" href="AnyScriptReference/reference/classes/AnyStdJoint.html#anystdjoint" title="(in AnyScript Reference v7.3)"><span>AnyStdJoint</span></a>,
-<a class="reference external" href="AnyScriptReference/reference/classes/AnyForceBase.html#anyforcebase" title="(in AnyScript Reference v7.3)"><span>AnyForceBase</span></a>,
-<a class="reference external" href="AnyScriptReference/reference/classes/AnyForceSurfaceContact.html#anyforcesurfacecontact" title="(in AnyScript Reference v7.3)"><span>AnyForceSurfaceContact</span></a>,
-<a class="reference external" href="AnyScriptReference/reference/classes/AnyKinMeasure.html#anykinmeasure" title="(in AnyScript Reference v7.3)"><span>AnyKinMeasure</span></a>,
-<a class="reference external" href="AnyScriptReference/reference/classes/AnyMuscleViaPointBase.html#anymuscleviapointbase" title="(in AnyScript Reference v7.3)"><span>AnyMuscleViaPointBase</span></a>,
-<a class="reference external" href="AnyScriptReference/reference/classes/AnyParamSurf.html#anyparamsurf" title="(in AnyScript Reference v7.3)"><span>AnyParamSurf</span></a></p></li>
+<a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyRefFrame.html#anyrefframe" title="(in AnyScript Reference v7.4)"><span>AnyRefFrame</span></a>,
+<a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnySeg.html#anyseg" title="(in AnyScript Reference v7.4)"><span>AnySeg</span></a>,
+<a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyStdJoint.html#anystdjoint" title="(in AnyScript Reference v7.4)"><span>AnyStdJoint</span></a>,
+<a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyForceBase.html#anyforcebase" title="(in AnyScript Reference v7.4)"><span>AnyForceBase</span></a>,
+<a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyForceSurfaceContact.html#anyforcesurfacecontact" title="(in AnyScript Reference v7.4)"><span>AnyForceSurfaceContact</span></a>,
+<a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyKinMeasure.html#anykinmeasure" title="(in AnyScript Reference v7.4)"><span>AnyKinMeasure</span></a>,
+<a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyMuscleViaPointBase.html#anymuscleviapointbase" title="(in AnyScript Reference v7.4)"><span>AnyMuscleViaPointBase</span></a>,
+<a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyParamSurf.html#anyparamsurf" title="(in AnyScript Reference v7.4)"><span>AnyParamSurf</span></a></p></li>
 <li><p>The AnyDrawObjects for these classes have by default their visibility set to Off, but they can be controlled through AnyScript and the Model Tree.</p></li>
 <li><p>In the coming major version of AnyBody, it is planned that visibility of auto-generated drawing objects will change so that default visibility
 will show model features more intuitively. This will minimize the need for manually created drawing objects,
@@ -713,29 +732,29 @@ to provide better overview for more typical interaction. This will also affect t
 <ul class="simple">
 <li><p><strong>AnyScript Modeling Language:</strong></p>
 <ul>
-<li><p><a class="reference external" href="AnyScriptReference/reference/classes/AnyDrawSTL.html#anydrawstl" title="(in AnyScript Reference v7.3)"><span>AnyDrawSTL</span></a> will now give an error if the file specified by the <a class="reference external" href="AnyScriptReference/reference/classes/AnyDrawSTL.html#anydrawstl-filename" title="(in AnyScript Reference v7.3)"><span>FileName</span></a> member does not exist.</p></li>
-<li><p>Explicitly setting the <a class="reference external" href="AnyScriptReference/reference/classes/AnyBodyStudy.html#anybodystudy-gravity" title="(in AnyScript Reference v7.3)"><span class="xref std std-ref">AnyBodyStudy.Gravity</span></a> variable is no longer required for the
-<a class="reference external" href="AnyScriptReference/reference/classes/AnyKinStudy.html#anykinstudy" title="(in AnyScript Reference v7.3)"><span>AnyKinStudy</span></a> class.</p></li>
-<li><p><a class="reference external" href="AnyScriptReference/reference/classes/AnyDesStudy.html#anydesstudy" title="(in AnyScript Reference v7.3)"><span>AnyDesStudy</span></a> and derived classes are now able to save/load changed design variables as <code class="docutils literal notranslate"><span class="pre">*.anyset</span></code> files
+<li><p><a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyDrawSTL.html#anydrawstl" title="(in AnyScript Reference v7.4)"><span>AnyDrawSTL</span></a> will now give an error if the file specified by the <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyDrawSTL.html#anydrawstl-filename" title="(in AnyScript Reference v7.4)"><span>FileName</span></a> member does not exist.</p></li>
+<li><p>Explicitly setting the <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyBodyStudy.html#anybodystudy-gravity" title="(in AnyScript Reference v7.4)"><span class="xref std std-ref">AnyBodyStudy.Gravity</span></a> variable is no longer required for the
+<a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyKinStudy.html#anykinstudy" title="(in AnyScript Reference v7.4)"><span>AnyKinStudy</span></a> class.</p></li>
+<li><p><a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyDesStudy.html#anydesstudy" title="(in AnyScript Reference v7.4)"><span>AnyDesStudy</span></a> and derived classes are now able to save/load changed design variables as <code class="docutils literal notranslate"><span class="pre">*.anyset</span></code> files
 from the “Save design”/”Load design” Class Operations, which makes it easier to save and retrieve data for instance when design-studies
 are used to tune or calibrate models.</p></li>
-<li><p>The <a class="reference external" href="AnyScriptReference/anyscript/inside-anybody.html#insideams-evalmoments" title="(in AnyScript Reference v7.3)"><span class="xref std std-ref">evalutation moment</span></a> of the <a class="reference external" href="AnyScriptReference/reference/classes/AnyOperationMacro.html#anyoperationmacro-macrostr" title="(in AnyScript Reference v7.3)"><span class="xref std std-ref">MacrAnyDrawPLineoStr</span></a>
-and <a class="reference external" href="AnyScriptReference/reference/classes/AnyOperationMacro.html#anyoperationmacro-filename" title="(in AnyScript Reference v7.3)"><span class="xref std std-ref">MacroFile</span></a> members of <a class="reference external" href="AnyScriptReference/reference/classes/AnyOperationMacro.html#anyoperationmacro" title="(in AnyScript Reference v7.3)"><span>AnyOperationMacro</span></a>
+<li><p>The <a class="reference external" href="https://anyscript.org/reference-manual/anyscript/inside-anybody.html#insideams-evalmoments" title="(in AnyScript Reference v7.4)"><span class="xref std std-ref">evalutation moment</span></a> of the <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyOperationMacro.html#anyoperationmacro-macrostr" title="(in AnyScript Reference v7.4)"><span class="xref std std-ref">MacrAnyDrawPLineoStr</span></a>
+and <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyOperationMacro.html#anyoperationmacro-filename" title="(in AnyScript Reference v7.4)"><span class="xref std std-ref">MacroFile</span></a> members of <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyOperationMacro.html#anyoperationmacro" title="(in AnyScript Reference v7.4)"><span>AnyOperationMacro</span></a>
 has been changed so they can be modified after the model has loaded, for instance from the AnyBody GUI or via the “Set Value” Class Operations.</p></li>
 </ul>
 </li>
 <li><p><strong>Model View:</strong></p>
 <ul>
 <li><p>Over-activated muscles will no longer turn purple when the user has defined a custom color
-map for muscle activations. (i.e. when <a class="reference external" href="AnyScriptReference/reference/classes/AnyDrawMuscle.html#anydrawmuscle-drawscaleonoff" title="(in AnyScript Reference v7.3)"><span class="xref std std-ref">DrawScaleOnOff==On</span></a>).
+map for muscle activations. (i.e. when <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyDrawMuscle.html#anydrawmuscle-drawscaleonoff" title="(in AnyScript Reference v7.4)"><span class="xref std std-ref">DrawScaleOnOff==On</span></a>).
 It will respect the user-defined color map also for activities above 1.0.</p></li>
 <li><p>The default format when saving pictures from the modelview has changed from <code class="docutils literal notranslate"><span class="pre">bmp</span></code> to <code class="docutils literal notranslate"><span class="pre">png</span></code>.</p></li>
-<li><p><a class="reference external" href="AnyScriptReference/reference/classes/AnyStyleFont3DView.html#anystylefont3dview" title="(in AnyScript Reference v7.3)"><span class="xref std std-ref">AnyStyleFont3DView</span></a> has a new member <a class="reference external" href="AnyScriptReference/reference/classes/AnyStyleFont3DView.html#anystylefont3dview-rotation" title="(in AnyScript Reference v7.3)"><span>Rotation</span></a> for setting counter-clockwise rotation in degrees for billboarded text.</p></li>
+<li><p><a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyStyleFont3DView.html#anystylefont3dview" title="(in AnyScript Reference v7.4)"><span class="xref std std-ref">AnyStyleFont3DView</span></a> has a new member <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyStyleFont3DView.html#anystylefont3dview-rotation" title="(in AnyScript Reference v7.4)"><span>Rotation</span></a> for setting counter-clockwise rotation in degrees for billboarded text.</p></li>
 <li><p>Line drawing objects: Default values introduced; obligatory initialization is no longer required:</p>
 <ul>
-<li><p>The member <a class="reference external" href="AnyScriptReference/reference/classes/AnyDrawLine.html#anydrawline-line-thickness" title="(in AnyScript Reference v7.3)"><span class="xref std std-ref">AnyDrawLine.Line.Thickness</span></a> is no longer a required variable when creating
-the <a class="reference external" href="AnyScriptReference/reference/classes/AnyDrawLine.html#anydrawline" title="(in AnyScript Reference v7.3)"><span>AnyDrawLine</span></a> class.</p></li>
-<li><p>The members <a class="reference external" href="AnyScriptReference/reference/classes/AnyDrawPLine.html#anydrawpline-thickness" title="(in AnyScript Reference v7.3)"><span class="xref std std-ref">AnyDrawPLine.Thickness</span></a> and <a class="reference external" href="AnyScriptReference/reference/classes/AnyDrawPLine.html#anydrawpline-rgb" title="(in AnyScript Reference v7.3)"><span class="xref std std-ref">AnyDrawPLine.RGB</span></a> now have a default
+<li><p>The member <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyDrawLine.html#anydrawline-line-thickness" title="(in AnyScript Reference v7.4)"><span class="xref std std-ref">AnyDrawLine.Line.Thickness</span></a> is no longer a required variable when creating
+the <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyDrawLine.html#anydrawline" title="(in AnyScript Reference v7.4)"><span>AnyDrawLine</span></a> class.</p></li>
+<li><p>The members <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyDrawPLine.html#anydrawpline-thickness" title="(in AnyScript Reference v7.4)"><span class="xref std std-ref">AnyDrawPLine.Thickness</span></a> and <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyDrawPLine.html#anydrawpline-rgb" title="(in AnyScript Reference v7.4)"><span class="xref std std-ref">AnyDrawPLine.RGB</span></a> now have a default
 and need not be initialized explicitly. Color is set to blue if not specified by the user.</p></li>
 </ul>
 </li>
@@ -743,9 +762,9 @@ and need not be initialized explicitly. Color is set to blue if not specified by
 <ul>
 <li><p>The RGB values evaluation moment has been updated to be ModelSceneVar, so the color can be depending on time,
 kinematic or kinetic variables.
-This applies to the following AnyDrawObjects: <a class="reference external" href="AnyScriptReference/reference/classes/AnyDrawForceSurface.html#anydrawforcesurface" title="(in AnyScript Reference v7.3)"><span>AnyDrawForceSurface</span></a>,
-ref:<cite>refman:AnyDrawKinMeasure</cite>, <a class="reference external" href="AnyScriptReference/reference/classes/AnyDrawPLine.html#anydrawpline" title="(in AnyScript Reference v7.3)"><span>AnyDrawPLine</span></a>, <a class="reference external" href="AnyScriptReference/reference/classes/AnyDrawSphere.html#anydrawsphere" title="(in AnyScript Reference v7.3)"><span>AnyDrawSphere</span></a>, <a class="reference external" href="AnyScriptReference/reference/classes/AnyDrawStdJoint.html#anydrawstdjoint" title="(in AnyScript Reference v7.3)"><span>AnyDrawStdJoint</span></a></p></li>
-<li><p><a class="reference external" href="AnyScriptReference/reference/classes/AnyDrawPLine.html#anydrawpline-thickness" title="(in AnyScript Reference v7.3)"><span class="xref std std-ref">AnyDrawPLine.Thickness</span></a> is no longer constant and can depend on time, kinematic or kinetic variables.</p></li>
+This applies to the following AnyDrawObjects: <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyDrawForceSurface.html#anydrawforcesurface" title="(in AnyScript Reference v7.4)"><span>AnyDrawForceSurface</span></a>,
+ref:<cite>refman:AnyDrawKinMeasure</cite>, <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyDrawPLine.html#anydrawpline" title="(in AnyScript Reference v7.4)"><span>AnyDrawPLine</span></a>, <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyDrawSphere.html#anydrawsphere" title="(in AnyScript Reference v7.4)"><span>AnyDrawSphere</span></a>, <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyDrawStdJoint.html#anydrawstdjoint" title="(in AnyScript Reference v7.4)"><span>AnyDrawStdJoint</span></a></p></li>
+<li><p><a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyDrawPLine.html#anydrawpline-thickness" title="(in AnyScript Reference v7.4)"><span class="xref std std-ref">AnyDrawPLine.Thickness</span></a> is no longer constant and can depend on time, kinematic or kinetic variables.</p></li>
 </ul>
 </li>
 </ul>
@@ -758,25 +777,25 @@ would break the dependency chain for the output collector.</p></li>
 <li><p>The logging to Output window for some mechanical object messages has been improved.</p></li>
 <li><p>The included Python distribution has been updated to include some additional relevant packages, and to make the environment consistent and updateable.</p></li>
 <li><p>AnyBody GUI application now respects the ‘–noninteractive’ command line argument and exits after executing macrofiles with the GUI application with the <code class="docutils literal notranslate"><span class="pre">--macro=</span></code> command line argument.</p></li>
-<li><p><a class="reference external" href="AnyScriptReference/reference/classes/AnyGUIPlugin.html#anyguiplugin" title="(in AnyScript Reference v7.3)"><span>AnyGUIPlugin</span></a>: Functionality for using AnyGUIPlugin in macro files has been added:
+<li><p><a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyGUIPlugin.html#anyguiplugin" title="(in AnyScript Reference v7.4)"><span>AnyGUIPlugin</span></a>: Functionality for using AnyGUIPlugin in macro files has been added:
 An optional “blocking” parameter has been added to AnyGUIPlugin “start plugin” class operation (default: FALSE). When set to “TRUE”, macro execution is suspended until the active AnyGUIPlugin process is ended.</p></li>
 </ul>
 <p><strong>Bugfixes:</strong></p>
 <ul class="simple">
-<li><p>Fixed bugs in the metabolism models (derived from <a class="reference external" href="AnyScriptReference/reference/classes/AnyMetabModelBase.html#anymetabmodelbase" title="(in AnyScript Reference v7.3)"><span>AnyMetabModelBase</span></a>) especially <a class="reference external" href="AnyScriptReference/reference/classes/AnyMetabModelB.html#anymetabmodelb" title="(in AnyScript Reference v7.3)"><span>AnyMetabModelB</span></a> and <a class="reference external" href="AnyScriptReference/reference/classes/AnyMetabModelU.html#anymetabmodelu" title="(in AnyScript Reference v7.3)"><span>AnyMetabModelU</span></a> has been updated.
-This also build on a fix in the calculation of the muscle fiber power, Pm, for <a class="reference external" href="AnyScriptReference/reference/classes/AnyGeneralMuscle.html#anygeneralmuscle" title="(in AnyScript Reference v7.3)"><span>AnyGeneralMuscle</span></a>.</p></li>
-<li><p>Fixed a bug in <a class="reference external" href="AnyScriptReference/reference/classes/AnyMuscleModel3E.html#anymusclemodel3e" title="(in AnyScript Reference v7.3)"><span>AnyMuscleModel3E</span></a> that could lead to small negative muscle forces.</p></li>
-<li><p>Fixed an issue where the presence of an <a class="reference external" href="AnyScriptReference/reference/classes/AnyCamRecorder.html#anycamrecorder" title="(in AnyScript Reference v7.3)"><span>AnyCamRecorder</span></a> in a model would cause
+<li><p>Fixed bugs in the metabolism models (derived from <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyMetabModelBase.html#anymetabmodelbase" title="(in AnyScript Reference v7.4)"><span>AnyMetabModelBase</span></a>) especially <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyMetabModelB.html#anymetabmodelb" title="(in AnyScript Reference v7.4)"><span>AnyMetabModelB</span></a> and <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyMetabModelU.html#anymetabmodelu" title="(in AnyScript Reference v7.4)"><span>AnyMetabModelU</span></a> has been updated.
+This also build on a fix in the calculation of the muscle fiber power, Pm, for <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyGeneralMuscle.html#anygeneralmuscle" title="(in AnyScript Reference v7.4)"><span>AnyGeneralMuscle</span></a>.</p></li>
+<li><p>Fixed a bug in <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyMuscleModel3E.html#anymusclemodel3e" title="(in AnyScript Reference v7.4)"><span>AnyMuscleModel3E</span></a> that could lead to small negative muscle forces.</p></li>
+<li><p>Fixed an issue where the presence of an <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyCamRecorder.html#anycamrecorder" title="(in AnyScript Reference v7.4)"><span>AnyCamRecorder</span></a> in a model would cause
 slowdowns when running multiple AMS instances.</p></li>
 <li><p>Fixed a bug where certain nested AnyRefObject structures would cause a crash at load.</p></li>
 <li><p>Fixed a bug where some binary STL files could not be used in AnyBody as they were not correctly identified as binary.</p></li>
 <li><p>Fixed a bug where “Find in Files” search would not look at the last line of files.</p></li>
 <li><p>Fixed an issue that could sometimes result in AnyBody crashing when using the locate in script function.</p></li>
 <li><p>Fixed an issue where an invalid reference could crash AnyBody.</p></li>
-<li><p>Fixed a bug in <a class="reference external" href="AnyScriptReference/reference/classes/AnyForceMomentMeasure2.html#anyforcemomentmeasure2" title="(in AnyScript Reference v7.3)"><span>AnyForceMomentMeasure2</span></a> and <a class="reference external" href="AnyScriptReference/reference/classes/AnyForceMomentMeasure.html#anyforcemomentmeasure" title="(in AnyScript Reference v7.3)"><span>AnyForceMomentMeasure</span></a>,
+<li><p>Fixed a bug in <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyForceMomentMeasure2.html#anyforcemomentmeasure2" title="(in AnyScript Reference v7.4)"><span>AnyForceMomentMeasure2</span></a> and <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyForceMomentMeasure.html#anyforcemomentmeasure" title="(in AnyScript Reference v7.4)"><span>AnyForceMomentMeasure</span></a>,
 where force array input was not made an unique array before being used thereby occasionally adding the same forces multiple times.</p></li>
 <li><p>Fixed the fallback when GUI plugins fails to start correctly. A command window is now opened to expose Python errors in the plugin code.</p></li>
-<li><p>Improved error handling and reporting for Python errors in <a class="reference external" href="AnyScriptReference/reference/classes/AnyGUIPlugin.html#anyguiplugin" title="(in AnyScript Reference v7.3)"><span>AnyGUIPlugin</span></a>.</p></li>
+<li><p>Improved error handling and reporting for Python errors in <a class="reference external" href="https://anyscript.org/reference-manual/reference/classes/AnyGUIPlugin.html#anyguiplugin" title="(in AnyScript Reference v7.4)"><span>AnyGUIPlugin</span></a>.</p></li>
 </ul>
 <p><strong>Documentation and class examples:</strong></p>
 <ul class="simple">
