@@ -2,17 +2,65 @@
 AnyBody Release notes
 ###########################
 
+
+*******************************
+AnyBody, v.7.4.1 (31-05-2022)
+*******************************
+
+AnyBody, v.7.4.1 provides minor fixes to the AnyBody Modeling System as well as 
+new AnyScript language feature (optional assignment) which was not ready when 7.4 was 
+and hence arrives a bit delayed. The included updated AMMR (v.2.4.1) contains mostly bug fixes. 
+Please see the AMMR documentation for a
+`full changelog <https://anyscript.org/ammr-doc/changelog.html>`__.
+
+
+
+**AnyScript Language:**
+
+-  New syntax ``??=`` for optional assigment of :ref:`refman:AnyValue` objects.
+   The new operator can be used inplace of the normal ``=`` assigment for all :ref:`refman:AnyValue` objects. It works like
+   assigning a default value to the variable and allowing the value to reassigned 
+   somewhere else in the script.
+
+   .. code:: AnyScriptDoc
+
+      // MyValue defaults to `1` if not initilized elsewhere
+      AnyVar MyValue ??= 1; 
+
+      // This initiize `MyValue` to 10, hence overwriting the default
+      MyValue = 10;
+
+   The syntax also works on class members where a default value can be assigned.
+   This features works identical to what is possible inside class templates
+   with the ``#var`` prefix. 
+
+   .. tip:: 
+      The ``??=`` is an advanced script feature, which is usefull when 
+      creating resuable model componemts. It allows the user of the 
+      component to redefine inputs without needing to edit the 
+      component script files directly.
+
+**Bugfixes:**
+
+-  Fixed a bug which sometimes caused a crash on model reload if many or large files were open in the Script Editor.
+-  Fixed a bug where :ref:`AnyKinSPLine.P <refman:AnyKinSPLine.P>` would be marked as ``const``, which caused 
+   the variable to be lagging one timestep behind the simulation. This bug has no influence 
+   on the actual muscle wrapping or visualization of the wrapping muscle strings.
+-  Fixed a bug in the toolbar Operation dropdown menu, where some key operations
+   was not shown. 
+
+
 *******************************
 AnyBody, v.7.4.0 (28-04-2022)
 *******************************
+
 
 AnyBody, v.7.4.0 provides major updates to the AnyBody Managed Model Repository (AMMR v2.4). 
 The main new model highlights are a number of new examples of exoskeletons and a tool for applying femoral torsion to the TLEM leg model. 
 Most example models now also include a very convenient tool for creating creating high quality videos of the model with a single operation. 
 Besides these additions the new model repository also includes a host of model improvements to all body parts and many bug fixes to problems discovered since the last release. 
 
-.. seealso:: 
-   The `full AMMR changelog <https://anyscript.org/ammr-doc/changelog.html>`__ in the online documenation. 
+Please see the AMMR documentation for a `full changelog <https://anyscript.org/ammr-doc/changelog.html>`__.
 
 The AnyBody Modeling System itself also includes various updates, bugfixes and additions to the AnyScript preparser.
 
